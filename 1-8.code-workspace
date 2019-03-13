@@ -1,0 +1,12 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "1-8-jq-project",
+    "editor.wordWrapColumn": 120,
+    "prettier.tabWidth": 2
+  }
+}

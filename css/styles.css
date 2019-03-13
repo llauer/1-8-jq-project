@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600');
+
+body {
+  margin: 0;
+  padding: 60px;
+  /* width: 100%; */
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fff;
+  color: #444;
+}
+
+@media screen and (max-width: 480px) {
+  .list-container {
+    max-width: 200px;
+  }
+}
+.list-container {
+  margin: 0 auto;
+  grid-gap: 1px;
+  /* background: rgb(236, 230, 230); */
+}
+
+button {
+  color: rgb(131, 54, 54);
+  cursor: pointer;
+  /* display: block; */
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 45px;
+  margin: 0 1 1em;
+  max-width: 900px;
+  position: relative;
+  border-radius: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+  border: 1px solid;
+  overflow: hidden;
+}
+.img-responsive {
+  /* border: 1px solid black; */
+  /* border-radius: 20px; */
+  /* padding: 120px; */
+  height: 100px;
+  /* width: 200px; */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.img-responsive:hover {
+  /* opacity: 0.7; */
+  transform: scale(4);
+}
+button:hover {
+  /* border-top-color: #28597a; */
+  background: rgb(131, 54, 54);
+  color: rgb(255, 255, 255);
+}
+
+button:active {
+  border-top-color: #1b435e;
+  background: #1b435e;
+}
+
+.closeBtn {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  max-width: 50px;
+}
+
+.closeBtn:hover,
+.closeBtn:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.pokemon-list {
+  list-style-type: none;
+  padding-left: 0;
+  text-align: center;
+}
+
+.pokemon-list li {
+  padding: 10px;
+  border-bottom: 1px solid #dddddd;
+  text-align: center;
+}
+
+h1 {
+  /* font-size: 50px; */
+  /* calculate the size of the font based on screen size - Trying this out. */
+  font-size: calc(1em + 1vw);
+  text-align: center;
+  width: 100%;
+  background: rgb(131, 54, 54);
+  color: #fff;
+  margin-top: 1%;
+  margin: 15px;
+  padding: 1em 0 1em;
+  border-top-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+/* here will be the modal styles. */
+
+#modal-container {
+  display: none;
+}
+
+#modal-container.is-visible {
+  position: fixed;
+  padding: 20px;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /* box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0, 0.8), 0 7px 20px 0 rgba(0, 0, 0, 0, 0.17); */
+
+  /* to show it above other content */
+  z-index: 999;
+
+  /* to allow scrolling if the screen is not high enough*/
+  overflow: auto;
+
+  /* this is used to center the modal */
+  display: grid;
+  text-align: center;
+}
+
+.modal {
+  margin: auto;
+  display: inline-block;
+  box-sizing: border-box;
+  background: #fff;
+  padding: 15px;
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+
+  /* add some style to the opening of the modal area */
+  animation-name: modalopen;
+  animation-duration: 1s;
+
+  /* boxshadow doesnt seem to be working properly removing for now.
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0, 0.8), 0 7px 20px 0 rgba(0, 0, 0, 0, 0.17); */
+}
+
+.modal-close {
+  float: right;
+  -webkit-appearance: none;
+  border: 0;
+  background: none;
+  color: #777;
+  text-decoration: none;
+  font-size: 50px;
+}
+
+.modal h1 {
+  margin-top: 0;
+  margin: 0%;
+  text-transform: uppercase;
+}
+
+.modal p {
+  margin-bottom: 0;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
