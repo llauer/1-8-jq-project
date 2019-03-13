@@ -76,7 +76,7 @@ var pokemonRepository = (function() {
     $modalContainer.empty();
 
     // create div and add class modal
-    var modal = $('<div class="modal" />');
+    var modal = $('<div class="modal"></div>');
 
     // Add the new modal content
     // create close button, add icon and classes
@@ -128,7 +128,7 @@ var pokemonRepository = (function() {
   //close the modal if the user clicks outside of the container.
   $modalContainer.on('click', e => {
     var target = e.target;
-    if (target === $modalContainer) {
+    if (target === $modalContainer[0]) {
       hideModal();
     }
   });
