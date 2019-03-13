@@ -42,7 +42,8 @@ button {
   /* border: 1px solid black; */
   /* border-radius: 20px; */
   /* padding: 120px; */
-  height: 100px;
+  height: 200px;
+  width: 200px;
   /* width: 200px; */
   border-radius: 5px;
   cursor: pointer;
