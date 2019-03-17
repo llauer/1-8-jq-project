@@ -21,11 +21,10 @@ var pokemonRepository = (function() {
     var $button = $('<button>' + newPokemon.name + '</button>');
     $li.append($button);
 
-    // $button.innerText = newPokemon.name;
-    // $button.textContent = newPokemon.name;
-
     // the mouse click needs to call the showDetails function
+    /* eslint-disable no-unused-vars */
     $button.on('click', function(event) {
+      /* eslint-enable no-unused-vars */
       showDetails(newPokemon);
     });
   }
@@ -44,7 +43,9 @@ var pokemonRepository = (function() {
         });
       })
       .catch(function(e) {
+        /* eslint-disable no-console */
         console.error(e);
+        /* eslint-enable no-console */
       });
   }
 
@@ -52,7 +53,9 @@ var pokemonRepository = (function() {
     var url = item.detailsUrl;
     return $.ajax(url)
       .then(function(response) {
+        /* eslint-disable no-console */
         console.log(response);
+        /* eslint-enable no-console */
         item.imageUrl = response.sprites.front_default;
         item.height = response.height;
         item.weight = response.weight;
@@ -60,7 +63,9 @@ var pokemonRepository = (function() {
         item.types = response.types[0].type.name;
       })
       .catch(function(e) {
+        /* eslint-disable no-console */
         console.error(e);
+        /* eslint-enable no-console */
       });
   }
 
@@ -113,10 +118,6 @@ var pokemonRepository = (function() {
   function hideModal() {
     $modalContainer.removeClass('is-visible');
   }
-
-  // document.querySelector('#show-modal').addEventListener('click', () => {
-  //   showModal('Modal title', 'This is the modal content!');
-  // });
 
   //if the user presses the ESC key the modal will close. Changed to hasClass for jq.
   window.addEventListener('keydown', e => {
